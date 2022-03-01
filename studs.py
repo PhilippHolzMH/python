@@ -10,8 +10,7 @@ def berechnung_alter(geburtsjahr, geburtsmonat, geburtstag):
         return diff -1
     return diff
 
-vorname = input("please type your first name: ")
-nachname = input ("please type your last name: ")
+vorname,nachname = map(str,input("please type your name: ").split ())
 tag,monat,jahr = map(int, input("Enter a date: ").split('.'))
 alter = berechnung_alter (jahr, monat, tag)
 
