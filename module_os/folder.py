@@ -5,9 +5,14 @@ def create_fold (foldername,inputprofile):
         print ("Der Ordner    "+foldername +"    wurde erstellt")
         os.system("touch "+ foldername +"/profile.txt")
         os.system("echo "+ inputprofile +" >> "+ foldername +"/profile.txt") 
-        return True
-    else: 
-        print("Der Ordner " +foldername+ " existiert bereits!")
-        print("Bitte versuche es erneut")
-        return False
-        
+    else:
+        success = False 
+        while success == False:
+            print("Der Ordner " +foldername+ " existiert bereits!")
+            foldername = input("Gebe einen persönlichen Ordnernamen an: ")
+            if not os.path.exists(foldername):
+                os.mkdir(foldername)
+                print ("Der Ordner    "+foldername +"    wurde erstellt")
+                os.system("touch "+ foldername +"/profile.txt")
+                os.system("echo "+ inputprofile +" >> "+ foldername +"/profile.txt")
+                success=True 
