@@ -14,7 +14,7 @@ vorname,nachname = map(str,input("So gebe er mir Vor und Nachnamen: ").split ())
 tag,monat,jahr = map(int, input("Wann hat er das Licht der Welt entdeckt? ").split('.'))
 alter = berechnung_alter (jahr, monat, tag)
 
-if alter > 18:
+if alter > 17:
     with open ('studentendb.csv', 'a', newline='') as input_file:
         writer = csv.writer(input_file)
         writer.writerow([vorname,nachname,alter])
