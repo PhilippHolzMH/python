@@ -10,8 +10,8 @@ def berechnung_alter(geburtsjahr, geburtsmonat, geburtstag):
         return diff -1
     return diff
 
-vorname,nachname = map(str,input("please type your name: ").split ())
-tag,monat,jahr = map(int, input("Enter a date: ").split('.'))
+vorname,nachname = map(str,input("So gebe er mir Vor und Nachnamen: ").split ())
+tag,monat,jahr = map(int, input("Wann hat er das Licht der Welt entdeckt? ").split('.'))
 alter = berechnung_alter (jahr, monat, tag)
 
 if alter > 18:
@@ -20,4 +20,3 @@ if alter > 18:
         writer.writerow([vorname,nachname,alter])
 else:
     print ("Sorry du bist zu jung")
-
