@@ -10,6 +10,11 @@ class Testbirthday(unittest.TestCase):
         today = datetime.datetime.strptime("22.02.2022", "%d.%m.%Y")
         result = berechnung_alter(birthday,today)
         self.assertEqual(result,22)
+    def test_calculated_age_day2(self):
+        birthday = datetime.datetime.strptime("22.05.2000","%d.%m.%Y")
+        today = datetime.datetime.strptime("22.02.2022", "%d.%m.%Y")
+        result = berechnung_alter(birthday,today)
+        self.assertEqual(result,21)
     
 
 if __name__ == '__main__':
