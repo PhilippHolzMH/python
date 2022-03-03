@@ -1,4 +1,4 @@
-name: CI
+name: Birthday_test
 
 on:
   workflow_dispatch:
